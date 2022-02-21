@@ -1,7 +1,7 @@
 apiVersion: storage.gcp.crossplane.io/v1alpha3
 kind: Bucket
 metadata:
-  name: devops-bucket-created-by-crossplane
+  name: devops-bucket-crossplane
   namespace: production
 spec:
   location: us-central1
