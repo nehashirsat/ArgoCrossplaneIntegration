@@ -12,7 +12,7 @@ spec:
   source:
     repoURL: https://github.com/nehashirsat/ArgoCrossplaneIntegration.git
     targetRevision: HEAD
-    path: crossplane-resources
+    path: controller
   destination:
     server: https://kubernetes.default.svc
     namespace: production
