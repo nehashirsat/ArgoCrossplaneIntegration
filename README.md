@@ -121,3 +121,6 @@ argocd login <ARGOCD_SERVER>
 ```bash
 argocd account update-password
 ```
+
+
+
