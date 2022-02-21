@@ -102,3 +102,22 @@ sudo curl --silent --location -o /usr/local/bin/argocd https://github.com/argopr
 sudo chmod +x /usr/local/bin/argocd
 ```
 
+### Access The Argo CD API Server
+```bash
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+```
+
+### Login Using The CLI
+- retrive the initial admin password
+```bash
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+```
+
+- Login with server IP
+```bash
+argocd login <ARGOCD_SERVER>
+```
+- Change the password using the command
+```bash
+argocd account update-password
+```
